@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { Key, SetStateAction, useState } from "react";
 import Slider from "react-slick";
-import "./product-slider/slick.css"
-import "./product-slider/slick-theme.css"
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import SliderData from "../app/(routes)/_components/slider-data";
 import { useRouter } from "next/navigation";
 

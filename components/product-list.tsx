@@ -1,7 +1,8 @@
 import { FaBolt } from "react-icons/fa6";
 import { Product } from "@/types";
 import Container from "./ui/container";
-import ProductSlider from "./product-slider/product-slider";
+import ProductCard from "./ui/product-card";
+
 
 interface ProductListProps {
   title: string;
@@ -15,7 +16,11 @@ const ProductList = ({ title, items }: ProductListProps) => {
           <FaBolt size={25} className="text-[#e94560]" />
           <h3 className="font-bold text-3xl">{title}</h3>
         </div>
-        <ProductSlider data={items} />
+       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+       {items.map((item)=>(
+        <ProductCard key={item.id} data={item} />
+        ))}
+       </div>
       </div>
     </Container>
   );
