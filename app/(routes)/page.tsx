@@ -1,6 +1,7 @@
 import getProducts from "@/actions/get-products";
 import Banner from "@/components/banner";
 import ProductList from "@/components/product-list";
+import Container from "@/components/ui/container";
 
 export const revalidate = 0;
 export default async function Home() {
@@ -8,7 +9,9 @@ export default async function Home() {
   return (
     <>
       <Banner />
-      <ProductList title="Featured Products" items={products} />
+      <Container>
+        <ProductList title="Featured Products" items={products} />
+      </Container>
     </>
   );
 }

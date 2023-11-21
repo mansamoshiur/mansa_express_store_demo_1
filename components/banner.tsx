@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { Key, SetStateAction, useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SliderData from "../app/(routes)/_components/slider-data";
 import { useRouter } from "next/navigation";
+import SliderData from "./slider-data";
 
 const Banner = () => {
   const router = useRouter();
